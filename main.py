@@ -10,9 +10,7 @@ import asyncio
 import openai
 import os
 
-# -------------------
 # Configuration
-# -------------------
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 REDIS_CHAT_PREFIX = "chat:"
 REDIS_BOOKING_PREFIX = "booking:"
@@ -26,9 +24,7 @@ redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
 app = FastAPI(title="Conversational RAG API")
 
-# -------------------
 # Models
-# -------------------
 class Booking(BaseModel):
     name: str
     email: EmailStr
@@ -39,9 +35,7 @@ class ChatMessage(BaseModel):
     session_id: str
     message: str
 
-# -------------------
 # Helpers
-# -------------------
 def save_booking_file(booking_id: str, data: dict):
     if BOOKING_FILE.exists():
         all_bookings = json.loads(BOOKING_FILE.read_text())
@@ -78,9 +72,7 @@ async def query_openai_async(prompt: str, chat_history: Optional[List[Dict[str, 
 
     return await asyncio.to_thread(call_openai)
 
-# -------------------
 # Booking Endpoints
-# -------------------
 @app.post("/book/", status_code=200)
 def create_booking(booking: Booking):
     booking_id = str(uuid4())
@@ -107,9 +99,7 @@ def list_bookings():
         return json.loads(BOOKING_FILE.read_text())
     return {}
 
-# -------------------
 # Chat Endpoints
-# -------------------
 @app.post("/chat/")
 async def chat_endpoint(chat: ChatMessage):
     session_key = f"{REDIS_CHAT_PREFIX}{chat.session_id}"
