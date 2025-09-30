@@ -1,0 +1,82 @@
+[
+  {
+    "timestamp": "2025-09-30T13:09:25.343614",
+    "role": "user",
+    "message": "hi,my name is simra"
+  },
+  {
+    "timestamp": "2025-09-30T13:09:28.369305",
+    "role": "assistant",
+    "message": "Hello Simra! How can I assist you today?"
+  },
+  {
+    "timestamp": "2025-09-30T13:09:59.390293",
+    "role": "user",
+    "message": "i want to book an appointment"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:01.673576",
+    "role": "assistant",
+    "message": "Great! I'd be happy to help you book an appointment. What's your name?"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:18.435060",
+    "role": "user",
+    "message": "Simra"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:20.628641",
+    "role": "assistant",
+    "message": "Thanks, Simra! What's your email address?"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:34.753351",
+    "role": "user",
+    "message": "Simra@gmail.com"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:36.773294",
+    "role": "assistant",
+    "message": "When would you like to schedule the appointment? (e.g., tomorrow, next Monday, December 5th)"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:52.839088",
+    "role": "user",
+    "message": "tommorrow"
+  },
+  {
+    "timestamp": "2025-09-30T13:10:54.680562",
+    "role": "assistant",
+    "message": "When would you like to schedule the appointment? (e.g., tomorrow, next Monday, December 5th)"
+  },
+  {
+    "timestamp": "2025-09-30T13:11:27.954387",
+    "role": "user",
+    "message": "December 5th"
+  },
+  {
+    "timestamp": "2025-09-30T13:11:27.987059",
+    "role": "assistant",
+    "message": "What time works best for you? (e.g., 2pm, 14:00, 2:30 PM)"
+  },
+  {
+    "timestamp": "2025-09-30T13:11:48.549436",
+    "role": "user",
+    "message": "2pm"
+  },
+  {
+    "timestamp": "2025-09-30T13:11:48.754144",
+    "role": "assistant",
+    "message": "\nPlease confirm your booking details:\n\u2022 Name: Simra\n\u2022 Email: Simra@gmail.com\n\u2022 Date: 2025-12-05\n\u2022 Time: 14:00\n\nReply with 'yes' or 'confirm' to complete the booking, or tell me what you'd like to change.\n"
+  },
+  {
+    "timestamp": "2025-09-30T13:12:08.868321",
+    "role": "user",
+    "message": "yes"
+  },
+  {
+    "timestamp": "2025-09-30T13:12:08.884525",
+    "role": "assistant",
+    "message": "\u2705 Booking confirmed!\n\nBooking ID: 3d90cc87-3fae-42ee-89e9-494abc9bbde1\nName: Simra\nEmail: Simra@gmail.com\nDate: 2025-12-05\nTime: 14:00\n\nYou'll receive a confirmation email shortly. Is there anything else I can help you with?"
+  }
+]

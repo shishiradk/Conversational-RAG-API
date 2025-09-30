@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2025-09-30T11:54:39.894823",
+    "role": "user",
+    "message": "I want to do booking .my name is rita and my email is rita@gmail.com"
+  },
+  {
+    "timestamp": "2025-09-30T11:54:39.907642",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T11:55:36.079250",
+    "role": "user",
+    "message": "9/31/2025"
+  },
+  {
+    "timestamp": "2025-09-30T11:55:36.086552",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T11:56:24.154333",
+    "role": "user",
+    "message": "9/31/2025"
+  },
+  {
+    "timestamp": "2025-09-30T11:56:24.165734",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T11:56:44.444982",
+    "role": "user",
+    "message": "Date=9/31/2025"
+  },
+  {
+    "timestamp": "2025-09-30T11:56:44.454903",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  }
+]

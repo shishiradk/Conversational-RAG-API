@@ -36,7 +36,7 @@ else:
 try:
     redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
     redis_client.ping()
-    print(f" Connected to Redis at {REDIS_URL}")
+    print(f"✓ Connected to Redis at {REDIS_URL}")
 except Exception as e:
     print(f"WARNING: Could not connect to Redis: {e}")
     redis_client = None
@@ -242,7 +242,7 @@ async def query_openai_async(prompt: str, chat_history: Optional[List[Dict[str, 
 
     return await asyncio.to_thread(call_openai)
 
-# Booking Endpoints
+# ------------------ Booking Endpoints ------------------
 @app.post("/book/", status_code=200)
 def create_booking(booking: Booking):
     booking_id = str(uuid4())
@@ -292,7 +292,7 @@ def delete_booking(booking_id: str):
             return {"status": "deleted", "booking_id": booking_id}
     raise HTTPException(status_code=404, detail="Booking not found")
 
-# Chat Endpoint
+# ------------------ Enhanced Chat Endpoint ------------------
 @app.post("/chat/")
 async def chat_endpoint(chat: ChatMessage):
     session_key = f"{REDIS_CHAT_PREFIX}{chat.session_id}"
@@ -330,12 +330,12 @@ async def chat_endpoint(chat: ChatMessage):
     if booking_session:
         user_message_lower = chat.message.lower()
         
-    # Handle cancellation
+        # Handle cancellation
         if any(word in user_message_lower for word in ['cancel', 'stop', 'nevermind', 'forget it']):
             delete_redis_booking_session(chat.session_id)
             answer = "No problem! I've cancelled the booking process. How else can I help you?"
         
-    # Handle confirmation
+        # Handle confirmation
         elif booking_session.is_complete() and any(word in user_message_lower for word in ['yes', 'confirm', 'correct', 'looks good', 'perfect']):
             try:
                 # Create the booking
@@ -356,7 +356,7 @@ async def chat_endpoint(chat: ChatMessage):
                 # Clean up booking session
                 delete_redis_booking_session(chat.session_id)
                 
-                answer = f""" Booking confirmed!
+                answer = f"""✅ Booking confirmed!
 
 Booking ID: {booking_id}
 Name: {booking_session.name}
@@ -406,7 +406,7 @@ You'll receive a confirmation email shortly. Is there anything else I can help y
                     answer = "What time works best for you? (e.g., 2pm, 14:00, 2:30 PM)"
     
     else:
-    # No booking in progress - use OpenAI for general conversation
+        # No booking in progress - use OpenAI for general conversation
         try:
             answer = await query_openai_async(chat.message, chat_history=history)
         except Exception as e:
@@ -429,7 +429,7 @@ You'll receive a confirmation email shortly. Is there anything else I can help y
         "booking_complete": booking_session.is_complete() if booking_session else False
     }
 
-# Chat History Endpoints
+# ------------------ Chat History Endpoints ------------------
 @app.get("/chat_history/{session_id}")
 def get_chat_history(session_id: str):
     session_key = f"{REDIS_CHAT_PREFIX}{session_id}"
@@ -475,7 +475,7 @@ def list_chats():
             print(f"Error reading {f}: {e}")
     return all_chats
 
-# Booking Session Management
+# ------------------ Booking Session Management ------------------
 @app.get("/booking_session/{session_id}")
 def get_booking_session_status(session_id: str):
     """Get the current booking session status"""
@@ -495,7 +495,7 @@ def cancel_booking_session(session_id: str):
     delete_redis_booking_session(session_id)
     return {"status": "cancelled", "session_id": session_id}
 
-# Health Checks
+# ------------------ Health Checks ------------------
 @app.get("/")
 def health_check():
     return {

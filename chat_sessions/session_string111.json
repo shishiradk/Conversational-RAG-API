@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2025-09-30T13:04:04.562749",
+    "role": "user",
+    "message": "I want to book an appointment"
+  },
+  {
+    "timestamp": "2025-09-30T13:04:06.593049",
+    "role": "assistant",
+    "message": "Please provide your name for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T13:04:37.528944",
+    "role": "user",
+    "message": "My name is Shishir"
+  },
+  {
+    "timestamp": "2025-09-30T13:04:42.538184",
+    "role": "assistant",
+    "message": "Great, Shishir! What type of appointment are you looking to book, and do you have a preferred date and time?"
+  },
+  {
+    "timestamp": "2025-09-30T13:05:26.807668",
+    "role": "user",
+    "message": "Dental checkup on 2025-10-01 at 14:30"
+  },
+  {
+    "timestamp": "2025-09-30T13:05:29.778430",
+    "role": "assistant",
+    "message": "I'm here to assist you, but I don't have direct access to external systems or services to book appointments. I recommend contacting your dental office directly to book your checkup for October 1, 2025, at 2:30 PM. You can usually do this by phone, their website, or through an email.\n\nIf you need help with what to say when booking or any other assistance related to your appointment, feel free to ask!"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "timestamp": "2025-09-30T12:12:25.446965",
+    "role": "user",
+    "message": "i want to book tommorrow my name is shishir and my email is shishir@gmail.com"
+  },
+  {
+    "timestamp": "2025-09-30T12:12:27.674351",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T12:13:27.262286",
+    "role": "user",
+    "message": "i want to book tommorrow my name is shishir and my email is shishir@gmail.com,booking date = 30 jan 2025"
+  },
+  {
+    "timestamp": "2025-09-30T12:13:27.295845",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T12:13:40.092925",
+    "role": "user",
+    "message": "i want to book tommorrow my name is shishir and my email is shishir@gmail.com,booking date = 30 jan 2025"
+  },
+  {
+    "timestamp": "2025-09-30T12:13:40.127040",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T12:13:42.678219",
+    "role": "user",
+    "message": "i want to book tommorrow my name is shishir and my email is shishir@gmail.com,booking date = 30 jan 2025"
+  },
+  {
+    "timestamp": "2025-09-30T12:13:42.717788",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  },
+  {
+    "timestamp": "2025-09-30T12:16:09.888623",
+    "role": "user",
+    "message": "I want to book an appointment tomorrow. My name is Shishir and my email is shishir@gmail.com5"
+  },
+  {
+    "timestamp": "2025-09-30T12:16:09.920332",
+    "role": "assistant",
+    "message": "Please provide your date for the booking."
+  }
+]
