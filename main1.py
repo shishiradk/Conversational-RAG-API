@@ -13,7 +13,7 @@ import asyncio
 from openai import OpenAI
 import os
 
-# Configuration
+# ---------------- Configuration ----------------
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 REDIS_CHAT_PREFIX = "chat:"
 REDIS_BOOKING_PREFIX = "booking:"
