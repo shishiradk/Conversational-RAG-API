@@ -1,6 +1,4 @@
 from dotenv import load_dotenv
-load_dotenv()
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, EmailStr
 from uuid import uuid4
@@ -12,6 +10,9 @@ from pathlib import Path
 import asyncio
 from openai import OpenAI
 import os
+
+
+load_dotenv()
 
 # Configuration
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
@@ -40,7 +41,7 @@ except Exception as e:
 
 app = FastAPI(title="Conversational RAG API")
 
-# ---------------- Models ----------------
+# Models
 class Booking(BaseModel):
     name: str
     email: EmailStr
@@ -51,7 +52,7 @@ class ChatMessage(BaseModel):
     session_id: str
     message: str
 
-# ---------------- Helpers ----------------
+# Helpers
 def save_booking_file(booking_id: str, data: dict):
     """Save booking to JSON file"""
     try:
@@ -105,7 +106,7 @@ async def query_openai_async(prompt: str, chat_history: Optional[List[Dict[str, 
 
     return await asyncio.to_thread(call_openai)
 
-# ---------------- Booking Endpoints ----------------
+# Booking Endpoints
 @app.post("/book/", status_code=200)
 def create_booking(booking: Booking):
     """Create a new booking"""
@@ -176,7 +177,7 @@ def delete_booking(booking_id: str):
     
     raise HTTPException(status_code=404, detail="Booking not found")
 
-# ---------------- Chat Endpoints ----------------
+# Chat Endpoints
 @app.post("/chat/")
 async def chat_endpoint(chat: ChatMessage):
     """Send a message and get AI response"""
@@ -285,7 +286,7 @@ def list_chats():
             print(f"Error reading {f}: {e}")
     return all_chats
 
-# ---------------- Health Check ----------------
+# Health Check
 @app.get("/")
 def health_check():
     """API health check"""
