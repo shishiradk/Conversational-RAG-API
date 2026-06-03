@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2025-10-17T01:12:54.207125",
+    "role": "user",
+    "message": "hello i want to make a booking"
+  },
+  {
+    "timestamp": "2025-10-17T01:12:56.088122",
+    "role": "assistant",
+    "message": "Thanks, Hello! What's your email address?"
+  },
+  {
+    "timestamp": "2025-10-17T01:14:52.380248",
+    "role": "user",
+    "message": "hi"
+  },
+  {
+    "timestamp": "2025-10-17T01:14:55.176157",
+    "role": "assistant",
+    "message": "Thanks, Hello! What's your email address?"
+  },
+  {
+    "timestamp": "2025-10-17T01:15:14.292400",
+    "role": "user",
+    "message": "add@gmail.com"
+  },
+  {
+    "timestamp": "2025-10-17T01:15:15.839595",
+    "role": "assistant",
+    "message": "When would you like to schedule the appointment? (e.g., tomorrow, next Monday, December 5th)"
+  }
+]

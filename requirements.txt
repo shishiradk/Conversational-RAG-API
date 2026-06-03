@@ -6,3 +6,5 @@ sentence-transformers
 redis
 email-validator 
 python-dotenv
+django
+fastapi

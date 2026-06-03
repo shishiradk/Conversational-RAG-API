@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2025-10-17T01:19:44.526240",
+    "role": "user",
+    "message": "hi"
+  },
+  {
+    "timestamp": "2025-10-17T01:19:48.844832",
+    "role": "assistant",
+    "message": "Hello! How can I assist you today?"
+  },
+  {
+    "timestamp": "2025-10-17T01:20:51.518455",
+    "role": "user",
+    "message": "name :rajkumar\nemail;aa@gmail.com\ndate;tommorrow exactly at 6 AM"
+  },
+  {
+    "timestamp": "2025-10-17T01:20:56.018201",
+    "role": "assistant",
+    "message": "Hello Rajkumar! It looks like you might be trying to schedule something for tomorrow at 6 AM. How can I assist you with this? Do you need a reminder or help with planning something specific?"
+  }
+]

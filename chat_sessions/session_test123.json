@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2025-11-11T21:29:08.151217",
+    "role": "user",
+    "message": "Hello, I want to book an appointment"
+  },
+  {
+    "timestamp": "2025-11-11T21:29:10.207040",
+    "role": "assistant",
+    "message": "Great! I'd be happy to help you book an appointment. What's your name?"
+  }
+]

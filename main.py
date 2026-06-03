@@ -49,16 +49,23 @@ class Booking(BaseModel):
     email: EmailStr
     date: str
     time: str
-    
+
     @validator('date')
     def validate_date(cls, v):
-        try:
-            booking_date = datetime.fromisoformat(v).date()
-            if booking_date < datetime.now().date():
-                raise ValueError("Booking date cannot be in the past")
-            return v
-        except ValueError as e:
-            raise ValueError(f"Invalid date format or past date: {e}")
+        parsed = dateparser.parse(v, settings={'PREFER_DATES_FROM': 'future'})
+        if not parsed:
+            raise ValueError(f"Invalid date format: {v!r}")
+        booking_date = parsed.date()
+        if booking_date < datetime.now().date():
+            raise ValueError("Booking date cannot be in the past")
+        return booking_date.isoformat()
+
+    @validator('time')
+    def validate_time(cls, v):
+        parsed = dateparser.parse(v)
+        if not parsed:
+            raise ValueError(f"Invalid time format: {v!r}")
+        return parsed.strftime("%H:%M")
 
 class ChatMessage(BaseModel):
     session_id: str

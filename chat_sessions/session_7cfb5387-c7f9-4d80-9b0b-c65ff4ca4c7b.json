@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2025-10-17T01:02:09.260863",
+    "role": "user",
+    "message": "summarize this "
+  },
+  {
+    "timestamp": "2025-10-17T01:02:14.714382",
+    "role": "assistant",
+    "message": "Please provide the text or information you would like summarized."
+  },
+  {
+    "timestamp": "2025-10-17T01:02:39.017854",
+    "role": "user",
+    "message": "i  want to book an appointment"
+  },
+  {
+    "timestamp": "2025-10-17T01:02:42.751476",
+    "role": "assistant",
+    "message": "Great! I'd be happy to help you book an appointment. What's your name?"
+  },
+  {
+    "timestamp": "2025-10-17T01:03:11.617251",
+    "role": "user",
+    "message": "shishir adhikari"
+  },
+  {
+    "timestamp": "2025-10-17T01:03:15.339212",
+    "role": "assistant",
+    "message": "Thanks, Shishir Adhikari! What's your email address?"
+  }
+]
